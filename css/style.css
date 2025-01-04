@@ -420,7 +420,7 @@ button {
 /* ***************** */
 /* SECTION-PROCES */
 /* ***************** */
-.section-process {
+/* .section-process {
   padding: 6.4rem 0;
 }
 .grid-process {
@@ -466,9 +466,65 @@ hr {
 .active {
   display: block;
 }
-.process-img {
+.process-image {
   width: 100%;
+} */
+.section-process {
+  padding: 6.4rem 0;
 }
+
+.grid-process {
+  display: grid;
+  grid-template-columns: 10rem 1fr;
+  column-gap: 6.4rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.operations-tabs-container {
+  display: flex;
+  flex-direction: column;
+  gap: 6.4rem;
+}
+
+.operations-tab {
+  background-color: #226e32;
+  padding: 1.8rem;
+  font-size: 1.8rem;
+  color: #fff;
+  border-radius: 3rem;
+  transition: all 0.3s;
+}
+
+.tab-active {
+  background-color: #6bad78 !important;
+}
+
+.operation-content {
+  display: none;
+}
+
+.operation-content.active {
+  display: flex;
+  gap: 2rem;
+}
+
+.content {
+  flex: 1; /* Make content take half the width */
+}
+
+.process-image {
+  flex: 1; /* Make image take half the width */
+  max-width: 100%;
+}
+
+hr {
+  transform: rotate(90deg);
+  color: #343a40;
+}
+
+/* Responsive Styles for Screens Below 750px */
+
 /* ********************* */
 /* SECTION GALLERY */
 /* ********************* */
