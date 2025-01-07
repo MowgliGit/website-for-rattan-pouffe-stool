@@ -112,7 +112,7 @@ window.addEventListener("scroll", function (e) {
 // ***********************************************
 //Event Delegation: Implementing Page Navigation
 // ***********************************************
-const header = document.querySelector(".header");
+// const header = document.querySelector(".header");
 const links = document.querySelectorAll(".main-nav-link");
 
 window.addEventListener("scroll", function (e) {
@@ -141,24 +141,28 @@ window.addEventListener("scroll", function (e) {
 
 //Implementing a Sticky Navigation: The Scroll Event
 
-// const sectionAbout = document.querySelector('.section-about');
-// const initiaLCoords = sectionAbout.getBoundingClientRect();
+const sectionAbout = document.querySelector(".section-about");
+const initiaLCoords = sectionAbout.getBoundingClientRect();
 
-// window.addEventListener('scroll', function(e){
-//   document.querySelectorAll('.main-nav-link').forEach(function (el){
-//     if (window.scrollY > sectionFeature.offsetTop) {
-//       header.classList.remove('header--active')
-//       header.classList.add('sticky');
-//       header.style.transparent = 0.5;
-//       el.style.color = "#fff";
-//     } else {
-//       header.classList.remove('sticky');
-//       el.style.color = "#333";
-//     }
-//   })
+window.addEventListener("scroll", function (e) {
+  document.querySelectorAll(".main-nav-link").forEach(function (el) {
+    if (window.scrollY > sectionFeature.offsetTop) {
+      header.classList.remove("header--active");
+      header.classList.add("sticky");
+      header.style.transparent = 0.5;
+      el.style.color = "#fff";
+    } else {
+      header.classList.remove("sticky");
+      el.style.color = "#333";
+    }
+  });
+});
 
-// })
-
+window.addEventListener("scroll", () => {
+  const header = document.querySelector("#header");
+  const isScrolled = window.scrollY > 50; // Fixed scroll position for testing
+  header.classList.toggle("sticky", isScrolled);
+});
 // ***********************************************
 //Building a Tabbed Component for Testimonial
 // ***********************************************
@@ -328,3 +332,26 @@ dropdownToggles.forEach((toggle) => {
     dropdownMenu.classList.toggle("show");
   });
 });
+// ************************************************************
+// Select the required elements
+const header = document.querySelector(".header");
+const btnMobileNav = document.querySelector(".btn-mobile-nav");
+const menuIcons = document.querySelectorAll(".icon-mob-nav");
+
+// Function to toggle white color for icons
+const updateIconColor = () => {
+  if (
+    header.classList.contains("sticky") &&
+    header.classList.contains("nav-open")
+  ) {
+    menuIcons.forEach((icon) => {
+      icon.style.color = "#fff";
+    });
+  } else {
+    menuIcons.forEach((icon) => {
+      icon.style.color = ""; // Reset to default color
+    });
+  }
+};
+
+// Listen for scroll events to add/remove sticky class
