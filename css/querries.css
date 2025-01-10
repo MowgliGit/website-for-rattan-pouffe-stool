@@ -292,6 +292,8 @@ Medium:;
     visibility: hidden;
     margin: 0 !important;
     padding: 0 !important;
+    border-top-right-radius: 10rem;
+    border-bottom-right-radius: 10rem;
   }
   .nav-open .main-nav {
     transform: translateX(0);
