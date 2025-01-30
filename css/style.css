@@ -67,6 +67,7 @@ html {
   /*10 / 16 = 0.625 * 100 = 62.5 */
   overflow-x: hidden;
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 body {
   font-family: "Inter", sans-serif;
@@ -75,8 +76,12 @@ body {
   font-weight: 400;
   overflow-x: hidden;
 }
+.main-page {
+  max-width: 155rem;
+  margin: 0 auto;
+}
 .container {
-  max-width: 120rem;
+  max-width: 140rem;
   margin: 0 auto;
   padding: 0 3.2rem;
 }
@@ -122,7 +127,7 @@ img {
 /* NAVIGATION */
 /* *************** */
 .sticky {
-  max-width: 134rem !important;
+  max-width: 155rem !important;
   margin: 1rem auto;
   height: 9.6rem;
   display: flex;
@@ -139,6 +144,8 @@ img {
   color: #fff !important;
 }
 .headerStyle {
+  max-width: 155rem !important;
+  margin: 1rem auto;
   height: 9.6rem;
   display: flex;
   justify-content: space-between;
@@ -149,7 +156,7 @@ img {
   margin-top: 1rem;
 }
 .header {
-  max-width: 130rem;
+  max-width: 155rem !important;
   margin: 1rem auto;
   height: 9.6rem;
   display: flex;
@@ -695,6 +702,8 @@ input {
 }
 /* FOOTER */
 .section-footer {
+  max-width: 150rem;
+  margin: 0;
   padding: 6.4rem;
   background-color: #226e38;
   color: #fff;

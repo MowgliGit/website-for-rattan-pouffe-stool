@@ -1,11 +1,21 @@
 // ***********************************
-//Make Mobile Navigation work
 
+// Make Mobile Navigation work
 const btnNavEl = document.querySelector(".btn-mobile-nav");
 const headerEl = document.querySelector(".header");
+const navLinks = document.querySelectorAll(".main-nav-link"); // Select all the navigation links
 
 btnNavEl.addEventListener("click", () => {
   headerEl.classList.toggle("nav-open");
+});
+
+// Close the mobile navigation when a link is clicked
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    if (headerEl.classList.contains("nav-open")) {
+      headerEl.classList.remove("nav-open");
+    }
+  });
 });
 //Types of Events and Event Handlers
 // ***********************************
