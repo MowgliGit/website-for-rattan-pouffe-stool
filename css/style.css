@@ -75,6 +75,8 @@ body {
   line-height: 1;
   font-weight: 400;
   overflow-x: hidden;
+  max-width: 155rem;
+  margin: 0 auto;
 }
 .main-page {
   max-width: 155rem;
@@ -128,13 +130,13 @@ img {
 /* *************** */
 .sticky {
   max-width: 155rem !important;
-  margin: 1rem auto;
+  margin: 0 auto;
   height: 9.6rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 4.8rem 0 6.4rem;
-  border-radius: 3rem;
+
   position: fixed;
   top: 0;
   right: 0;
@@ -145,19 +147,18 @@ img {
 }
 .headerStyle {
   max-width: 155rem !important;
-  margin: 1rem auto;
+  margin: 0 auto;
   height: 9.6rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 4.8rem;
   background-color: #226e32;
-  border-radius: 3rem;
   margin-top: 1rem;
 }
 .header {
   max-width: 155rem !important;
-  margin: 1rem auto;
+  margin: 0 auto;
   height: 9.6rem;
   display: flex;
   justify-content: space-between;
